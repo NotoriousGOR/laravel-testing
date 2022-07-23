@@ -2,7 +2,8 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build && vite build --ssr"
+        "build": "vite build && vite build --ssr",
+        "prod": "mix --production && mix --production --mix-config=webpack.ssr.mix.js"
     },
     "devDependencies": {
         "@headlessui/react": "^1.4.2",
