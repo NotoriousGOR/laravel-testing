@@ -1,0 +1,252 @@
+[
+    {
+        "name": "Alabama",
+        "abbreviation": "AL",
+        "established_in": "December 14, 1819"
+    },
+    {
+        "name": "Alaska",
+        "abbreviation": "AK",
+        "established_in": "January 3, 1959"
+    },
+    {
+        "name": "Arizona",
+        "abbreviation": "AZ",
+        "established_in": "February 14, 1912"
+    },
+    {
+        "name": "Arkansas",
+        "abbreviation": "AR",
+        "established_in": "June 15, 1836"
+    },
+    {
+        "name": "California",
+        "abbreviation": "CA",
+        "established_in": "September 9, 1850"
+    },
+    {
+        "name": "Colorado",
+        "abbreviation": "CO",
+        "established_in": "August 1, 1876"
+    },
+    {
+        "name": "Connecticut",
+        "abbreviation": "CT",
+        "established_in": "January 9, 1788*"
+    },
+    {
+        "name": "Delaware",
+        "abbreviation": "DE",
+        "established_in": "December 7, 1787*"
+    },
+    {
+        "name": "Florida",
+        "abbreviation": "FL",
+        "established_in": "March 3, 1845"
+    },
+    {
+        "name": "Georgia",
+        "abbreviation": "GA",
+        "established_in": "January 2, 1788*"
+    },
+    {
+        "name": "Hawaii",
+        "abbreviation": "HI",
+        "established_in": "August 21, 1959"
+    },
+    {
+        "name": "Idaho",
+        "abbreviation": "ID",
+        "established_in": "July 3, 1890"
+    },
+    {
+        "name": "Illinois",
+        "abbreviation": "IL",
+        "established_in": "December 3, 1818"
+    },
+    {
+        "name": "Indiana",
+        "abbreviation": "IN",
+        "established_in": "December 11, 1816"
+    },
+    {
+        "name": "Iowa",
+        "abbreviation": "IA",
+        "established_in": "December 28, 1846"
+    },
+    {
+        "name": "Kansas",
+        "abbreviation": "KS",
+        "established_in": "December 28, 1846"
+    },
+    {
+        "name": "Kentucky",
+        "abbreviation": "KY",
+        "established_in": "June 1, 1792"
+    },
+    {
+        "name": "Louisiana",
+        "abbreviation": "LA",
+        "established_in": "April 30, 1812"
+    },
+    {
+        "name": "Maine",
+        "abbreviation": "ME",
+        "established_in": "March 15, 1820"
+    },
+    {
+        "name": "Maryland",
+        "abbreviation": "MD",
+        "established_in": "April 28, 1788*"
+    },
+    {
+        "name": "Massachusetts",
+        "abbreviation": "MA",
+        "established_in": "February 6, 1788*"
+    },
+    {
+        "name": "Michigan",
+        "abbreviation": "MI",
+        "established_in": "January 26, 1837"
+    },
+    {
+        "name": "Minnesota",
+        "abbreviation": "MN",
+        "established_in": "May 11, 1858"
+    },
+    {
+        "name": "Mississippi",
+        "abbreviation": "MS",
+        "established_in": "December 10, 1817"
+    },
+    {
+        "name": "Missouri",
+        "abbreviation": "MO",
+        "established_in": "August 10, 1821"
+    },
+    {
+        "name": "Montana",
+        "abbreviation": "MT",
+        "established_in": "November 8, 1889"
+    },
+    {
+        "name": "Nebraska",
+        "abbreviation": "NE",
+        "established_in": "March 1, 1867"
+    },
+    {
+        "name": "Nevada",
+        "abbreviation": "NV",
+        "established_in": "October 31, 1864"
+    },
+    {
+        "name": "New Hampshire",
+        "abbreviation": "NH",
+        "established_in": "June 21, 1788*"
+    },
+    {
+        "name": "New Jersey",
+        "abbreviation": "NJ",
+        "established_in": "December 18, 1787*"
+    },
+    {
+        "name": "New Mexico",
+        "abbreviation": "NM",
+        "established_in": "January 6, 1912"
+    },
+    {
+        "name": "New York",
+        "abbreviation": "NY",
+        "established_in": "July 26, 1788*"
+    },
+    {
+        "name": "North Carolina",
+        "abbreviation": "NC",
+        "established_in": "November 21, 1789*"
+    },
+    {
+        "name": "North Dakota",
+        "abbreviation": "ND",
+        "established_in": "November 2, 1889"
+    },
+    {
+        "name": "Ohio",
+        "abbreviation": "OH",
+        "established_in": "March 1, 1803"
+    },
+    {
+        "name": "Oklahoma",
+        "abbreviation": "OK",
+        "established_in": "November 16, 1907"
+    },
+    {
+        "name": "Oregon",
+        "abbreviation": "OR",
+        "established_in": "February 14, 1859"
+    },
+    {
+        "name": "Pennsylvania",
+        "abbreviation": "PA",
+        "established_in": "December 12, 1787*"
+    },
+    {
+        "name": "Rhode Island",
+        "abbreviation": "RI",
+        "established_in": "May 29, 1790*"
+    },
+    {
+        "name": "South Carolina",
+        "abbreviation": "SC",
+        "established_in": "May 23, 1788*"
+    },
+    {
+        "name": "South Dakota",
+        "abbreviation": "SD",
+        "established_in": "November 2, 1889"
+    },
+    {
+        "name": "Tennessee",
+        "abbreviation": "TN",
+        "established_in": "June 1, 1796"
+    },
+    {
+        "name": "Texas",
+        "abbreviation": "TX",
+        "established_in": "December 29, 1845"
+    },
+    {
+        "name": "Utah",
+        "abbreviation": "UT",
+        "established_in": "January 4, 1896"
+    },
+    {
+        "name": "Vermont",
+        "abbreviation": "VT",
+        "established_in": "March 4, 1791"
+    },
+    {
+        "name": "Virginia",
+        "abbreviation": "VA",
+        "established_in": "June 25, 1788*"
+    },
+    {
+        "name": "Washington",
+        "abbreviation": "WA",
+        "established_in": "November 11, 1889"
+    },
+    {
+        "name": "West Virginia",
+        "abbreviation": "WV",
+        "established_in": "June 20, 1863"
+    },
+    {
+        "name": "Wisconsin",
+        "abbreviation": "WI",
+        "established_in": "May 29, 1848"
+    },
+    {
+        "name": "Wyoming",
+        "abbreviation": "WY",
+        "established_in": "July 10, 1890"
+    }
+]
