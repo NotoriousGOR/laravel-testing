@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, Head } from "@inertiajs/inertia-react";
+
 import Table from "../Components/Tables/Table";
+import Switch from "../Components/Switch"
 
 export default function Welcome() {
     return (
@@ -9,10 +11,7 @@ export default function Welcome() {
             <div className="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
                 <div className="fixed top-0 right-0 px-6 py-4 sm:block">
                     <>
-                        <label class="switch">
-                            <input type="checkbox" />
-                            <span class="slider round"></span>
-                        </label>
+                        <Switch/>
                     </>
                 </div>
 
