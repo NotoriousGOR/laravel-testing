@@ -1,4 +1,4 @@
-import { makeAutoObservable } from "mobx";
+import { makeObservable, observable, computed } from "mobx";
 
 /*
     Using a class component here, because not only does it feel more "clean" for state management, but it also seems to be the library's preferred
@@ -11,8 +11,23 @@ class Store {
     filter = "";
     theme = "dark";
 
-    constructor() {
-        makeAutoObservable(this);
+    constructor(price) {
+        makeObservable(this, {
+            states: observable,
+            filter: observable,
+            theme: observable,
+            filteredStates: computed
+        })
+    }
+
+    get filteredStates() {
+        if(!this.filter) {
+            return this.states;
+        }
+
+        return this.states.filter(state => {
+            state.name.toLowerCase().includes(this.filter);
+        }).slice(0, 20)
     }
 
     setStates(states) {
@@ -30,7 +45,7 @@ class Store {
 
 const store = new Store();
 
-// grabbing data from the exposed laravel "States" API route to then set state in MobX
+// grabbing data from the exposed Laravel "States" API route to then set state in MobX
 fetch("/api/states")
     .then((res) => res.json())
     .then((data) => store.setStates(data));
