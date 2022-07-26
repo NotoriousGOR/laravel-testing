@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import { makeAutoObservable } from "mobx";
 
 /*
@@ -6,11 +5,11 @@ import { makeAutoObservable } from "mobx";
     component architecture. So I'm just going to follow their best practices.
 */
 
-class Store extends Component {
+class Store {
     // setting default values for states and sort to be then updated by either API call, or filter method in the Table component (TBD)
     states = [];
     filter = "";
-    theme = "light";
+    theme = "dark";
 
     constructor() {
         makeAutoObservable(this);
@@ -31,4 +30,8 @@ class Store extends Component {
 
 const store = new Store();
 
-fetch("")
+// grabbing data from the exposed laravel "States" API route to then set state in MobX
+fetch("/api/states")
+    .then((res) => res.json())
+    .then((data) => store.setStates(data));
+export default store;

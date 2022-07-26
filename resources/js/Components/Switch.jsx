@@ -1,10 +1,16 @@
 import React from "react";
+import { observer } from "mobx-react"
+import store from "../store";
 
-export default function Switch() {
+
+const Switch = () =>  {
     return (
-        <label class="switch">
-            <input type="checkbox" />
-            <span class="slider round"></span>
+        <label className={`${store.theme} switch`}>
+            <input type="checkbox" value={(store.theme == "light")} onChange={(evt) => store.changeTheme(evt.target.value)} />
+            <span className="slider round"></span>
         </label>
     );
 }
+
+
+export default observer(Switch);

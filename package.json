@@ -24,6 +24,7 @@
         "vite": "^3.0.0"
     },
     "dependencies": {
-        "mobx": "^6.6.1"
+        "mobx": "^6.6.1",
+        "mobx-react": "^7.5.2"
     }
 }

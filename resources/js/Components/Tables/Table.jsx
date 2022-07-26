@@ -4,11 +4,11 @@ export default function Table(props) {
     return (
         <>
             <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Gender</th>
-                </tr>
+                <thead>
+                    <td>Name</td>
+                    <td>Age</td>
+                    <td>Gender</td>
+                </thead>
                 <tr>
                     <td>Anom</td>
                     <td>19</td>

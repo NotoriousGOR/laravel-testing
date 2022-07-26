@@ -1,8 +1,9 @@
 import React from "react";
 import { Link, Head } from "@inertiajs/inertia-react";
-
 import Table from "../Components/Tables/Table";
-import Switch from "../Components/Switch"
+import Switch from "../Components/Switch";
+
+
 
 export default function Welcome() {
     return (

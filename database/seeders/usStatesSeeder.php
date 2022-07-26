@@ -22,7 +22,7 @@ class usStatesSeeder extends Seeder
             $states = json_decode(File::get("{$base_path}/us-states.json"));
 
             foreach ($states as $key => $value) {
-                \App\Models\usStates::insert([
+                \App\Models\States::insert([
                     "name" => $value->name,
                     "abbreviation" => $value->abbreviation,
                     "established_in" => $value->established_in,
