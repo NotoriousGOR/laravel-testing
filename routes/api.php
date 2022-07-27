@@ -20,5 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
+// calls the StatesController, I'm used to the old way of doing things: Route::get('states', 'StatesController@index');
 Route::get('states', [StatesController::class, 'index']);

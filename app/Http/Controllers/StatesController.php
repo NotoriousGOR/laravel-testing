@@ -9,6 +9,7 @@ class StatesController extends Controller
 {
     public function index()
     {
+        // returns all records from DB, if the content type header is "application/json" it will return as json
         return States::all();
     }
 
