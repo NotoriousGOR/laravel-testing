@@ -18,7 +18,7 @@ class usStatesSeeder extends Seeder
         $base_path = base_path();
 
         if (file_exists("{$base_path}/us-states.json")) {
-            // gets file contents and turns into an collection for easy mapping
+            // gets file contents and seeds the db with the contents
             $states = json_decode(File::get("{$base_path}/us-states.json"));
 
             foreach ($states as $key => $value) {

@@ -16,8 +16,9 @@ const Table = () => {
                 </tr>
             </thead>
             <tbody>
+                {/* rendering a new row for each state with key set as the ID from the DB, not something you would want to do in production */}
                 {store.filteredStates.map((state) => (
-                    <TableRow state={state} key={state.abbreviation} />
+                    <TableRow state={state} key={state.id} />
                 ))}
             </tbody>
         </table>
