@@ -7,24 +7,26 @@ module.exports = {
         "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
         "./storage/framework/views/*.php",
         "./resources/views/**/*.blade.php",
-        "./resources/js/**/*.jsx",
+        "./resources/js/**/*.jsx"
     ],
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Nunito", ...defaultTheme.fontFamily.sans],
+                sans: ["Nunito", ...defaultTheme.fontFamily.sans]
             },
             backgroundColor: {
                 primary: "var(--color-bg-primary)",
-                secondary: "var(--color-bg-secondary)",
+                secondary: "var(--color-bg-secondary)"
             },
             textColor: {
                 accent: "var(--color-text-accent)",
                 primary: "var(--color-text-primary)",
-                secondary: "var(--color-text-secondary)",
+                secondary: "var(--color-text-secondary)"
             },
-        },
+            maxHeight: {
+                '128': '32rem'
+            }
+        }
     },
-
-    plugins: [require("@tailwindcss/forms")],
+    plugins: [require("@tailwindcss/forms")]
 };

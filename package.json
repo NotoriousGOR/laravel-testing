@@ -2,8 +2,7 @@
     "private": true,
     "scripts": {
         "dev": "(php artisan serve) & vite",
-        "build": "vite build && vite build --ssr",
-        "prod": "mix --production && mix --production --mix-config=webpack.ssr.mix.js"
+        "build": "vite build && vite build --ssr"
     },
     "devDependencies": {
         "@headlessui/react": "^1.4.2",

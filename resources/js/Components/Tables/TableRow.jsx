@@ -1,7 +1,3 @@
-import React from "react";
-import { observer } from "mobx-react";
-import store from "../../store";
-
 const TableRow = ({ state }) => {
     return (
         <tr className="odd:bg-secondary  bg-secondary dark:text-primary text-secondary even:bg-primary">
@@ -18,4 +14,4 @@ const TableRow = ({ state }) => {
     );
 };
 
-export default observer(TableRow);
+export default TableRow;
