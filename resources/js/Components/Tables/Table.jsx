@@ -7,9 +7,9 @@ const Table = () => {
         <table className="shadow-md h-full text-center text-white max-h-1 border-spacing-2 border border-slate-500 w-full">
             <thead className="dark:bg-zinc-500 bg-slate-400 text-secondary cursor-pointer border-b-2 border-slate-600">
                 <tr>
-                    <th scope="col" className="p-4 text-right underline underline-offset-4" onClick={() => store.setSort('alphabetical')}>Name</th>
-                    <th scope="col" className="p-4 underline underline-offset-4" onClick={() => store.setSort('alphabetical')}>Abbreviation</th>
-                    <th scope="col" className="p-4 text-left underline underline-offset-4" onClick={() => store.setSort('alphabetical')}>Established In</th>
+                    <th className="p-4 underline underline-offset-4" onClick={() => store.setSort('alphabetical')}>Name</th>
+                    <th className="p-4 underline underline-offset-4" onClick={() => store.setSort('alphabetical')}>Abbreviation</th>
+                    <th className="p-4 text-left underline underline-offset-4" onClick={() => store.setSort('alphabetical')}>Established In</th>
                 </tr>
             </thead>
             <tbody>
