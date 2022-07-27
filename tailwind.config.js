@@ -22,6 +22,9 @@ module.exports = {
                 accent: "var(--color-text-accent)",
                 primary: "var(--color-text-primary)",
                 secondary: "var(--color-text-secondary)"
+            },
+            maxHeight: {
+                '128': '32rem'
             }
         }
     },
