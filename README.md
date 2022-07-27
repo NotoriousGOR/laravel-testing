@@ -23,6 +23,9 @@ Requirements:
 -   [MobX](https://mobx.js.org/README.html)
 -   [Inertia.js](https://inertiajs.com/)
 
+
+Tried to host on EBS, but unfortunately Laravel 9 requires PHP v8.0.2, which is just shy of [EBS's latest version of v8.0.18](https://github.com/aws/elastic-beanstalk-roadmap/issues/214) 🥺
+
 Hosted on [fly.io](https://fly.io/) 🎈
 
 Installation:
