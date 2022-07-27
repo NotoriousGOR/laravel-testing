@@ -13,6 +13,7 @@ class Store {
 
     constructor(price) {
         makeObservable(this, {
+            // adding if the property can be read (observe), or is a computed value derived from an observable (similar to Vue.js), or is a method to alter state (action)
             states: observable,
             filter: observable,
             theme: observable,
@@ -54,6 +55,7 @@ class Store {
 const store = new Store();
 
 // grabbing data from the exposed Laravel "States" API route to then set state in MobX
+// thankfully CORS, or CSRF is not a concern here since it's from the same root
 fetch("/api/states")
     .then((res) => res.json())
     .then((data) => store.setStates(data));
