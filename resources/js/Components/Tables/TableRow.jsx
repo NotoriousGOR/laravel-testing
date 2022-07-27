@@ -4,6 +4,7 @@ const TableRow = ({ state }) => {
             <td className={`p-4 border-t border-b border-slate-700`}>
                 {state.name}
             </td>
+
             <td className={`p-4 border-t border-b border-slate-700`}>
                 {state.abbreviation}
             </td>
