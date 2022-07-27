@@ -1,4 +1,4 @@
-import { makeObservable, observable, computed } from "mobx";
+import { makeObservable, observable, computed, action } from "mobx";
 
 /*
     Using a class component here, because not only does it feel more "clean" for state management, but it also seems to be the library's preferred
@@ -16,7 +16,10 @@ class Store {
             states: observable,
             filter: observable,
             theme: observable,
-            filteredStates: computed
+            filteredStates: computed,
+            changeTheme: action,
+            setStates: action,
+            setFilter: action
         })
     }
 
@@ -38,8 +41,8 @@ class Store {
         this.filter = filter;
     }
 
-    changeTheme(theme) {
-        this.theme = theme;
+    changeTheme(isLight) {
+        this.theme = (isLight) ? "light" : "dark";
     }
 }
 

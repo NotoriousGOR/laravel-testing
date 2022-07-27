@@ -5,15 +5,15 @@ import store from "../../store";
 
 import TableRow from "./TableRow";
 
-const Table = (props) => {
+const Table = () => {
     return (
-        <table className="rounded border-collapse h-auto text-white max-h-1 border-spacing-2 border border-slate-500 table-auto">
-            <thead>
-            <tr>
-            {Object.keys(store.states).forEach((key) => (
-                    <th className="border border-slate-600">{key}</th>
-                ))}
-            </tr>
+        <table className="min-w-full shadow-md h-full text-center text-white max-h-1 border-spacing-2 border border-slate-500 w-full">
+            <thead className="bg-slate-50">
+                <tr>
+                    <th scope="col" className="text-black p-4 underline underline-offset-4">Name</th>
+                    <th scope="col" className="text-black p-4 underline underline-offset-4">Abbreviation</th>
+                    <th scope="col" className="text-black p-4 underline underline-offset-4">Established In</th>
+                </tr>
             </thead>
             <tbody>
                 {store.filteredStates.map((state) => (

@@ -17,7 +17,7 @@ module.exports = {
             colors: {
                 dark: {
                     "dark-grey": "#6d706f",
-                    mint: "#20c991",
+                    "mint": "#20c991",
                     "hot-pink": "#ff1f4f",
                     "light-grey": "#dae0de",
                 },

@@ -6,7 +6,7 @@ import store from "../store";
 const Switch = () =>  {
     return (
         <label className={`${store.theme} switch`}>
-            <input type="checkbox" value={(store.theme == "light")} onChange={(evt) => store.changeTheme(evt.target.value)} />
+            <input type="checkbox" value={(store.theme == "light")} onChange={(evt) => store.changeTheme(evt.target.checked)} />
             <span className="slider round"></span>
         </label>
     );

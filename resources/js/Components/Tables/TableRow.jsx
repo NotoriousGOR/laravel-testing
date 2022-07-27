@@ -1,13 +1,17 @@
 import React from 'react'
+import {observer} from "mobx-react"
+import store from '../../store'
 
-export default function TableRow({state}) {
+const TableRow = ({state}) => {
   return (
     <>
-    <tr key={state.key}>
-      <td className='border border-slate-700'>{state.name}</td>
-      <td className='border border-slate-700'>{state.abbreviation}</td>
-      <td className='border border-slate-700'>{state.established_in}</td>
+    <tr className='odd:bg-transparent even:bg-slate-700' key={state.key}>
+      <td className={`p-4 border-t border-b border-slate-700`}>{state.name}</td>
+      <td className={`p-4 border-t border-b border-slate-700`}>{state.abbreviation}</td>
+      <td className={`p-4 border-t border-b border-slate-700`}>{state.established_in}</td>
     </tr>
   </>
   )
 }
+
+export default observer(TableRow);
