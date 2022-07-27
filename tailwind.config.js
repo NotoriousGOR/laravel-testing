@@ -24,7 +24,7 @@ module.exports = {
                 secondary: "var(--color-text-secondary)"
             },
             maxHeight: {
-                '128': '32rem'
+                '128': '60rem'
             }
         }
     },

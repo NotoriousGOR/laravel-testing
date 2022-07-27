@@ -16,7 +16,7 @@ const Welcome = () => {
                     </>
                 </div>
 
-                <div className="w-3/4 max-h-128 sm:px-6 lg:px-8 overflow-auto">
+                <div className="w-1/2 max-h-128 sm:px-6 lg:px-8 overflow-auto">
                     <Table />
                 </div>
             </div>

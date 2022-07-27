@@ -6,47 +6,46 @@ import { makeObservable, observable, computed, action } from "mobx";
 */
 
 class Store {
-    // setting default values for states and sort to be then updated by either API call, or filter method in the Table component (TBD)
+    // setting default values for states and sort to be then updated by either API call, or sort method in the Table component (TBD)
     states = [];
-    filter = "";
+    sort = "A-Z";
     theme = "dark";
 
     constructor(price) {
         makeObservable(this, {
             // adding if the property can be read (observe), or is a computed value derived from an observable (similar to Vue.js), or is a method to alter state (action)
             states: observable,
-            filter: observable,
+            sort: observable,
             theme: observable,
-            filteredStates: computed,
+            sortedStates: computed,
             changeTheme: action,
             setStates: action,
-            setFilter: action
-        })
+            setSort: action,
+        });
     }
 
-    get filteredStates() {
-        if(!this.filter) {
-            return this.states;
+    get sortedStates() {
+        if(this.sort == "A-Z") {
+            return this.states.slice().sort((a, b) => (a[this.column] > b[this.column] ? 1 : 0));
+        } else {
+            return this.states.slice().reverse();
         }
-
-        return this.states.filter(state => {
-            state.name.toLowerCase().includes(this.filter);
-        })
     }
 
     setStates(states) {
         this.states = states;
     }
 
-    setFilter(filter) {
-        this.filter = filter;
+    setSort(sort) {
+        // simple toggle logic, if A-Z switch the sort to Z-A etc
+        this.sort = (this.sort == "A-Z") ? "Z-A" : "A-Z";
     }
 
     changeTheme(isLight) {
         // removes the initial mode
         document.body.classList.remove(this.theme);
         // actually sets the mode based on the Switch component
-        this.theme = (isLight) ? "light" : "dark";
+        this.theme = isLight ? "light" : "dark";
         // adds the new mode
         document.body.classList.add(this.theme);
     }
