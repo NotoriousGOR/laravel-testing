@@ -5,7 +5,6 @@ import Table from "../Components/Tables/Table";
 import Switch from "../Components/Switch";
 import store from "../store";
 
-
 const Welcome = () => {
     return (
         <>
