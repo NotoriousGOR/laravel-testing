@@ -17,9 +17,10 @@ Requirements:
 
 🛠 With:
 
--   [ReactJS](https://reactjs.org/)
+-   [React V17](https://reactjs.org/)
 -   [Laravel v9](https://laravel.com/docs/9.x)
 -   [Tailwind.css](https://tailwindcss.com/)
+-   [Font Awesome](https://fontawesome.com/v6/docs/web/setup/get-started)
 -   [MobX](https://mobx.js.org/README.html)
 -   [Inertia.js](https://inertiajs.com/)
 
@@ -34,8 +35,8 @@ Installation:
 
 For Development:
 
-    yarn run dev
+    yarn dev
 
 For Deployment:
 
-    yarn run build
+    yarn build

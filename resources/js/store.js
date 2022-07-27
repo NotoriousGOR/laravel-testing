@@ -6,14 +6,14 @@ import { makeObservable, observable, computed, action } from "mobx";
 */
 
 class Store {
-    // setting default values for states and sort to be then updated by either API call, or sort method in the Table component (TBD)
+    // setting default values and sort to be then updated by sort method in the Table Row component
     states = [];
     sort = "A-Z";
     theme = "dark";
 
     constructor(price) {
         makeObservable(this, {
-            // adding if the property can be read (observe), or is a computed value derived from an observable (similar to Vue.js), or is a method to alter state (action)
+            // declaring if the property can be read (observe), or computed value derived from an observable (similar to Vue.js), or is a method to alter a property (action)
             states: observable,
             sort: observable,
             theme: observable,
@@ -25,20 +25,24 @@ class Store {
     }
 
     get sortedStates() {
-        if(this.sort == "A-Z") {
-            return this.states.slice().sort((a, b) => (a[this.column] > b[this.column] ? 1 : 0));
+        if (this.sort == "A-Z") {
+            // sorts from A to Z (works for dates, strings, and ints)
+            return this.states.slice().sort((a, b) => (a > b ? 1 : 0));
         } else {
+            // takes the sorted array and simply reverses it for Z - A
+            // equivalent to this.states.slice().sort((a,b) => (a < b) ? 1 : 0));
             return this.states.slice().reverse();
         }
     }
 
     setStates(states) {
+        // updates the states property in the API call to the backend
         this.states = states;
     }
 
     setSort(sort) {
         // simple toggle logic, if A-Z switch the sort to Z-A etc
-        this.sort = (this.sort == "A-Z") ? "Z-A" : "A-Z";
+        this.sort = this.sort == "A-Z" ? "Z-A" : "A-Z";
     }
 
     changeTheme(isLight) {
