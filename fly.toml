@@ -1,6 +1,6 @@
-# fly.toml file generated for laravel-test on 2022-07-24T15:27:34-05:00
+# fly.toml file generated for us-states on 2022-07-24T16:31:18-05:00
 
-app = "laravel-test"
+app = "us-states"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []

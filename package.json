@@ -1,7 +1,7 @@
 {
     "private": true,
     "scripts": {
-        "dev": "vite",
+        "dev": "(php artisan serve) & vite",
         "build": "vite build && vite build --ssr",
         "prod": "mix --production && mix --production --mix-config=webpack.ssr.mix.js"
     },
@@ -24,6 +24,7 @@
         "vite": "^3.0.0"
     },
     "dependencies": {
-        "mobx": "^6.6.1"
+        "mobx": "^6.6.1",
+        "mobx-react": "^7.5.2"
     }
 }
