@@ -1,6 +1,6 @@
-# fly.toml file generated for us-states on 2022-07-24T16:31:18-05:00
+# fly.toml file generated for throbbing-butterfly-4071 on 2022-07-27T15:11:05-05:00
 
-app = "us-states"
+app = "throbbing-butterfly-4071"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
@@ -10,6 +10,15 @@ processes = []
   LOG_CHANNEL = "stderr"
   LOG_LEVEL = "info"
   LOG_STDERR_FORMATTER = "Monolog\\Formatter\\JsonFormatter"
+  APP_KEY= "base64:ykDvybAvW32d+PehEFxDdhit22YAtCap+cUpzJIophM="
+  APP_URL= "https://throbbing-butterfly-4071.fly.dev/"
+  DB_CONNECTION= "mysql"
+  DB_HOST= "containers-us-west-89.railway.app"
+  DB_USERNAME= "root"
+  DB_PORT= "7953"
+  DATABASE_URL= "mysql://root:OeV7JtUtjZop3AL5J1Y1@containers-us-west-89.railway.app:7953/railway"
+  DB_DATABASE= "railway"
+  DB_PASSWORD= "OeV7JtUtjZop3AL5J1Y1"
 
 [experimental]
   allowed_public_ports = []
