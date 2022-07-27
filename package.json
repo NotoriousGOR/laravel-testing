@@ -23,6 +23,10 @@
         "vite": "^3.0.0"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^6.1.2",
+        "@fortawesome/free-regular-svg-icons": "^6.1.2",
+        "@fortawesome/free-solid-svg-icons": "^6.1.2",
+        "@fortawesome/react-fontawesome": "^0.2.0",
         "mobx": "^6.6.1",
         "mobx-react": "^7.5.2"
     }

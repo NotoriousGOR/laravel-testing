@@ -1,15 +1,36 @@
 import { observer } from "mobx-react";
 import store from "../../store";
 import TableRow from "./TableRow";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretUp } from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 const Table = () => {
     return (
         <table className="shadow-md h-full text-center text-white max-h-1 border-spacing-2 border border-slate-500 w-full">
             <thead className="dark:bg-zinc-500 bg-slate-400 text-secondary cursor-pointer border-b-2 border-slate-600">
                 <tr>
-                    <th className="p-4 underline underline-offset-4" onClick={() => store.setSort('alphabetical')}>Name</th>
-                    <th className="p-4 underline underline-offset-4" onClick={() => store.setSort('alphabetical')}>Abbreviation</th>
-                    <th className="p-4 text-left underline underline-offset-4" onClick={() => store.setSort('alphabetical')}>Established In</th>
+                    <th
+                        className="p-4 underline underline-offset-4"
+                        onClick={() => store.setSort("alphabetical")}
+                    >
+                    Name
+                        <FontAwesomeIcon className="pl-2"
+                            icon={store.sort == "A-Z" ? faCaretDown : faCaretUp}
+                        />
+                    </th>
+                    <th
+                        className="p-4 underline underline-offset-4"
+                        onClick={() => store.setSort("alphabetical")}
+                    >
+                        Abbreviation
+                    </th>
+                    <th
+                        className="p-4 text-left underline underline-offset-4"
+                        onClick={() => store.setSort("alphabetical")}
+                    >
+                        Established In
+                    </th>
                 </tr>
             </thead>
             <tbody>
