@@ -2,7 +2,7 @@
 
 Create an application that loads JSON file that contains all of the US states.
 
-[Project Link](laravel-test.fly.dev)
+[Project Link](https://throbbing-butterfly-4071.fly.dev/)
 
 [Github Link](https://github.com/NotoriousGOR/laravel-testing)
 
