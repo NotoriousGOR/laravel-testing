@@ -30,7 +30,7 @@ class Store {
 
         return this.states.filter(state => {
             state.name.toLowerCase().includes(this.filter);
-        }).slice(0, 20)
+        })
     }
 
     setStates(states) {
@@ -42,7 +42,12 @@ class Store {
     }
 
     changeTheme(isLight) {
+        // removes the initial mode
+        document.body.classList.remove(this.theme);
+        // actually sets the mode based on the Switch component
         this.theme = (isLight) ? "light" : "dark";
+        // adds the new mode
+        document.body.classList.add(this.theme);
     }
 }
 
