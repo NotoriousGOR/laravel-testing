@@ -1,8 +1,8 @@
 import { makeObservable, observable, computed, action } from "mobx";
 
 /*
-    Using a class component here, because not only does it feel more "clean" for state management, but it also seems to be the library's preferred
-    component architecture. So I'm just going to follow their best practices.
+    Using class structure here, because not only does it feel more "clean" for state management, but it also seems to be the library's preferred
+    architecture. So I'm just going to follow their best practices.
 */
 
 class Store {
