@@ -85,4 +85,5 @@ const store = new Store();
 fetch("/api/states")
     .then((res) => res.json())
     .then((data) => store.setStates(data));
+
 export default store;
