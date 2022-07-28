@@ -9,8 +9,8 @@ env:
   LOG_CHANNEL: "stderr"
   LOG_LEVEL: "info"
   LOG_STDERR_FORMATTER: "Monolog\\Formatter\\JsonFormatter"
-  APP_KEY: "base64:ykDvybAvW32d+PehEFxDdhit22YAtCap+cUpzJIophM="
-  APP_URL: "https://throbbing-butterfly-4071.fly.dev/"
+  APP_KEY : "base64:ykDvybAvW32d+PehEFxDdhit22YAtCap+cUpzJIophM="
+  APP_URL : "https://throbbing-butterfly-4071.fly.dev/"
   DB_CONNECTION: "mysql"
   DATABASE_URL: "mysql://root:OeV7JtUtjZop3AL5J1Y1@containers-us-west-89.railway.app:7953/railway"
 jobs:
