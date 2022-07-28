@@ -23,7 +23,7 @@ const Table = () => {
                     <tr>
                         <th
                             className="p-4 underline underline-offset-4"
-                            onClick={() => store.setSort("alphabetical")}
+                            onClick={() => store.setSort(store.sort == "A-Z" ? "Z-A" : "A-Z")}
                         >
                             Name
                             <FontAwesomeIcon
@@ -37,15 +37,23 @@ const Table = () => {
                         </th>
                         <th
                             className="p-4 underline underline-offset-4"
-                            onClick={() => store.setSort("alphabetical")}
+                            onClick={() => store.setSort(store.sort == "A-Z" ? "Z-A" : "A-Z")}
                         >
                             Abbreviation
                         </th>
                         <th
                             className="p-4 text-left underline underline-offset-4"
-                            onClick={() => store.setSort("alphabetical")}
+                            onClick={() => store.setSort(store.sort == "ascending" ? "descending" : "ascending")}
                         >
                             Established In
+                            <FontAwesomeIcon
+                                className="pl-2"
+                                icon={
+                                    store.sort == "ascending"
+                                        ? faCaretDown
+                                        : faCaretUp
+                                }
+                            />
                         </th>
                     </tr>
                 </thead>

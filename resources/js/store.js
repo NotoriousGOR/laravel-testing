@@ -29,18 +29,29 @@ class Store {
 
     get sortedStates() {
         if (this.sort == "A-Z") {
-            // sorts from A to Z (works for dates, strings, and ints)
+            // sorts from A to Z
             // I have seen that .slice() can be pretty compute heavy, so I would love to hear the other engineer's feedback on if there's a better solution
-            let sortedArray = this.states.slice().sort((a, b) => (a > b ? 1 : 0));
-            // if the user is trying to filter the array, filter the sorted array
+            let sortedArray = this.states.slice().sort((a, b) => a.name.localeCompare(b.name));
+            // if the user is trying to filter the array lowercase both the input value and name in order to remove .includes case sensitivity, then filter the sortedArray
             return (this.filter) ? sortedArray.filter(({name}) => name.toLowerCase().includes(this.filter.toLowerCase())) : sortedArray;
 
-        } else {
-            // takes the sorted array and simply reverses it for Z - A
-            // equivalent to this.states.slice().sort((a,b) => (a < b) ? 1 : 0));
-            let inverseArray = this.states.slice().reverse();
-            // if the user is trying to filter the array, filter the inversed array
+        } else if(this.sort == "Z-A") {
+            // sorts from Z to A
+            let inverseArray = this.states.slice().sort((a,b) => b.name.localeCompare(a.name));
+            // if the user is trying to filter the array lowercase both the input value and name in order to remove .includes case sensitivity, then filter the inverseArray
             return (this.filter) ? inverseArray.filter(({name}) => name.toLowerCase().includes(this.filter.toLowerCase())) : inverseArray;
+
+        } else if(this.sort == "ascending") {
+            // sorts by ascending dates
+            let ascendingArray = this.states.slice().sort((a,b) => new Date(b.established_in) - new Date(a.established_in));
+            // if the user is trying to filter the array lowercase both the input value and name in order to remove .includes case sensitivity, then filter the ascendingArray
+            return (this.filter) ? ascendingArray.filter(({name}) => name.toLowerCase().includes(this.filter.toLowerCase())) : ascendingArray;
+
+        } else {
+            // sorts by descending dates
+            let descendingArray = this.states.slice().sort((a,b) => new Date(a.established_in) - new Date(b.established_in));
+            // if the user is trying to filter the array lowercase both the input value and name in order to remove .includes case sensitivity, then filter the descendingArray
+            return (this.filter) ? descendingArray.filter(({name}) => name.toLowerCase().includes(this.filter.toLowerCase())) : descendingArray;
         }
     }
 
@@ -50,8 +61,7 @@ class Store {
     }
 
     setSort(sort) {
-        // simple toggle logic, if A-Z switch the sort to Z-A etc
-        this.sort = this.sort == "A-Z" ? "Z-A" : "A-Z";
+        this.sort = sort;
     }
 
     setFilter(name) {
