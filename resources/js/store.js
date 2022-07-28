@@ -10,6 +10,7 @@ class Store {
     states = [];
     sort = "A-Z";
     theme = "dark";
+    filter = "";
 
     constructor(price) {
         makeObservable(this, {
@@ -17,21 +18,29 @@ class Store {
             states: observable,
             sort: observable,
             theme: observable,
+            filter: observable,
             sortedStates: computed,
             changeTheme: action,
             setStates: action,
             setSort: action,
+            setFilter: action,
         });
     }
 
     get sortedStates() {
         if (this.sort == "A-Z") {
             // sorts from A to Z (works for dates, strings, and ints)
-            return this.states.slice().sort((a, b) => (a > b ? 1 : 0));
+            // I have seen that .slice() can be pretty compute heavy, so I would love to hear the other engineer's feedback on if there's a better solution
+            let sortedArray = this.states.slice().sort((a, b) => (a > b ? 1 : 0));
+            // if the user is trying to filter the array, filter the sorted array
+            return (this.filter) ? sortedArray.filter(({name}) => name.toLowerCase().includes(this.filter.toLowerCase())) : sortedArray;
+
         } else {
             // takes the sorted array and simply reverses it for Z - A
             // equivalent to this.states.slice().sort((a,b) => (a < b) ? 1 : 0));
-            return this.states.slice().reverse();
+            let inverseArray = this.states.slice().reverse();
+            // if the user is trying to filter the array, filter the inversed array
+            return (this.filter) ? inverseArray.filter(({name}) => name.toLowerCase().includes(this.filter.toLowerCase())) : inverseArray;
         }
     }
 
@@ -43,6 +52,10 @@ class Store {
     setSort(sort) {
         // simple toggle logic, if A-Z switch the sort to Z-A etc
         this.sort = this.sort == "A-Z" ? "Z-A" : "A-Z";
+    }
+
+    setFilter(name) {
+        this.filter = name;
     }
 
     changeTheme(isLight) {
