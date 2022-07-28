@@ -15,7 +15,7 @@ const Welcome = () => {
                         <Switch />
                     </>
                 </div>
-                <div className="w-1/2 max-h-128 min-h-96 sm:px-6 lg:px-8 overflow-auto">
+                <div className="w-1/2 flex flex-col max-h-128 min-h-96 sm:px-6 lg:px-8 overflow-auto">
                     <Table />
                 </div>
             </div>

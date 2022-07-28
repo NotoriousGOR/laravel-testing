@@ -9,6 +9,7 @@ export default function Input({
     required,
     isFocused,
     handleChange,
+    placeholder
 }) {
     const input = useRef();
 
@@ -19,8 +20,9 @@ export default function Input({
     }, []);
 
     return (
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-end">
             <input
+                autoFocus
                 type={type}
                 name={name}
                 value={value}
@@ -28,6 +30,7 @@ export default function Input({
                     `border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm ` +
                     className
                 }
+                placeholder={placeholder}
                 ref={input}
                 autoComplete={autoComplete}
                 required={required}

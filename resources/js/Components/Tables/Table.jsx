@@ -12,10 +12,11 @@ const Table = () => {
             <Input
                 type="search"
                 name={"search-bar"}
-                className="w-1/3  align-middle mb-5"
+                className="w-1/3 justify-self-end  mb-5"
                 handleChange={(e) => {
                     store.setFilter(e.target.value);
                 }}
+                placeholder="Search"
             />
             <table className="shadow-md h-full text-center text-white max-h-1 border-spacing-2 border border-slate-500 w-full">
                 <thead className="dark:bg-zinc-500 bg-slate-400 text-secondary cursor-pointer border-b-2 border-slate-600">
