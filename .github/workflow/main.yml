@@ -1,0 +1,23 @@
+name: Fly Deploy
+on:
+  push:
+    branches:
+      - main
+env:
+  FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+  APP_ENV: "production"
+  LOG_CHANNEL: "stderr"
+  LOG_LEVEL: "info"
+  LOG_STDERR_FORMATTER: "Monolog\\Formatter\\JsonFormatter"
+  APP_KEY: "base64:ykDvybAvW32d+PehEFxDdhit22YAtCap+cUpzJIophM="
+  APP_URL: "https://throbbing-butterfly-4071.fly.dev/"
+  DB_CONNECTION: "mysql"
+  DATABASE_URL: "mysql://root:OeV7JtUtjZop3AL5J1Y1@containers-us-west-89.railway.app:7953/railway"
+jobs:
+  deploy:
+      name: Deploy app
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: superfly/flyctl-actions/setup-flyctl@master
+        - run: flyctl deploy --remote-only
