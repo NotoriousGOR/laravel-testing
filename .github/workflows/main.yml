@@ -6,13 +6,13 @@ on:
 env:
   FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
   APP_ENV: "production"
-  LOG_CHANNEL: "stderr"
-  LOG_LEVEL: "info"
-  LOG_STDERR_FORMATTER: "Monolog\\Formatter\\JsonFormatter"
-  APP_KEY : "base64:ykDvybAvW32d+PehEFxDdhit22YAtCap+cUpzJIophM="
-  APP_URL : "https://throbbing-butterfly-4071.fly.dev/"
-  DB_CONNECTION: "mysql"
-  DATABASE_URL: "mysql://root:OeV7JtUtjZop3AL5J1Y1@containers-us-west-89.railway.app:7953/railway"
+  LOG_CHANNEL: ""
+  LOG_LEVEL: ""
+  LOG_STDERR_FORMATTER: ""
+  APP_KEY: ""
+  APP_URL: ""
+  DB_CONNECTION: ""
+  DATABASE_URL: ""
 jobs:
   deploy:
       name: Deploy app
