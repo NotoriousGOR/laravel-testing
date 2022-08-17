@@ -1,6 +1,6 @@
 # US States Technical Excercise:
 
-Create an application that loads JSON file that contains all of the US states.
+Create an application that loads a JSON file containing all US states.
 
 [Project Link](https://throbbing-butterfly-4071.fly.dev/)
 
